@@ -1,0 +1,20 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Price Prediction</title>
+</head>
+<body>
+    <h1>{{ ticker }} Stock Price & Moving Averages</h1>
+
+    <form method="POST">
+        <label for="ticker">Enter Ticker Symbol:</label>
+        <input type="text" name="ticker" value="{{ ticker }}" required>
+        <button type="submit">Generate Plot</button>
+    </form>
+
+    <img src="{{ plot_path }}" alt="Stock Plot" style="width: 100%; max-width: 800px; margin-top: 20px;">
+
+</body>
+</html>
